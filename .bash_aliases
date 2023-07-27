@@ -6,18 +6,13 @@ alias upstack='cd ~/projetos/devilbox/ && docker-compose up -d httpd mysql && ./
 alias downstack='cd ~/projetos/devilbox/ && docker-compose down'
 
 # custom ls dir
-alias ll='ls -lrt'
+alias l='ls -lrt'
 
 # update on one command
 alias update='sudo apt update && sudo apt upgrade'
 
 # clear
 alias c='clear'
-
-# directory
-alias .='cd ../'
-alias ..='cd ../../'
-alias …='cd ../../../'
 
 # portas em uso
 alias ports='netstat -tulpn'
