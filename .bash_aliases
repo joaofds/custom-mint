@@ -16,3 +16,6 @@ alias c='clear'
 
 # portas em uso
 alias ports='netstat -tulpn'
+
+# python3 alias
+alias py='python3'
