@@ -19,3 +19,6 @@ alias ports='netstat -tulpn'
 
 # python3 alias
 alias py='python3'
+
+# django admin
+alias dad='django-admin'
