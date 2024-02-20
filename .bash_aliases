@@ -17,8 +17,7 @@ alias c='clear'
 # portas em uso
 alias ports='netstat -tulpn'
 
-# python3 alias
+# python
 alias py='python3'
-
-# django admin
 alias dad='django-admin'
+alias pym='python3 manage.py'
