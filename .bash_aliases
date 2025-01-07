@@ -1,9 +1,10 @@
-# laravel php artisan
-alias pa='php artisan'
-
 # docker start stack php mysql
 alias upstack='cd ~/projetos/devilbox/ && docker-compose up -d httpd mysql && ./shell.sh'
 alias downstack='cd ~/projetos/devilbox/ && docker-compose down'
+
+# docker postgres
+alias updb='cd ~/projetos/postgres && docker-compose up -d'
+alias downdb='cd ~/projetos/postgres && docker-compose down'
 
 # custom ls dir
 alias l='ls -lrt'
@@ -44,12 +45,19 @@ go_django(){
 }
 
 # cria projeto django na pasta atual
-go_project(){ 
+go_project() { 
   if [ -z "$1" ]; then 
     echo "Por favor, forneça o nome do projeto.";
   else 
-    django-admin startproject $1;
-  fi 
+    # Se o segundo argumento for fornecido, cria o projeto nesse diretório
+    if [ -z "$2" ]; then
+      # Se não houver o diretório, cria o projeto na pasta atual
+      django-admin startproject $1 .
+    else
+      # Cria o projeto no diretório especificado
+      django-admin startproject $1 $2
+    fi
+  fi
 }
 
 # roda django server
