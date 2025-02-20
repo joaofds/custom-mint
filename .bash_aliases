@@ -1,3 +1,6 @@
+# laravel php artisan
+alias pa="php artisan $1"
+
 # docker start stack php mysql
 alias upstack='cd ~/projetos/devilbox/ && docker-compose up -d httpd mysql && ./shell.sh'
 alias downstack='cd ~/projetos/devilbox/ && docker-compose down'
@@ -18,12 +21,13 @@ alias c='clear'
 # portas em uso
 alias ports='netstat -tulpn'
 
-### python
+# abre projeto, ativa venv e roda server
+run() {
+  cd ~/projetos/dti/"$1" && source "$2"/bin/activate && python manage.py runserver "$3"
+}
 
-alias py='python3'
-alias dad='django-admin'
-alias pym='python3 manage.py'
 
+# PYTHON
 # cria venv passando nome da venv
 go_env(){ 
   if [ -z "$1" ]; then 
