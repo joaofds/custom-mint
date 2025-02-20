@@ -21,13 +21,15 @@ alias c='clear'
 # portas em uso
 alias ports='netstat -tulpn'
 
+# PYTHON
+# python manage.py $1
+alias pym="python manage.py $1"
+
 # abre projeto, ativa venv e roda server
 run() {
   cd ~/projetos/dti/"$1" && source "$2"/bin/activate && python manage.py runserver "$3"
 }
 
-
-# PYTHON
 # cria venv passando nome da venv
 go_env(){ 
   if [ -z "$1" ]; then 
