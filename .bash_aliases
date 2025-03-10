@@ -2,12 +2,12 @@
 alias pa="php artisan $1"
 
 # docker start stack php mysql
-alias upstack='cd ~/projetos/devilbox/ && docker-compose up -d httpd mysql && ./shell.sh'
-alias downstack='cd ~/projetos/devilbox/ && docker-compose down'
+alias upstack='cd ~/projetos/devilbox/ && docker compose up -d httpd mysql && ./shell.sh'
+alias downstack='cd ~/projetos/devilbox/ && docker compose down'
 
 # docker postgres
-alias updb='cd ~/projetos/postgres && docker-compose up -d'
-alias downdb='cd ~/projetos/postgres && docker-compose down'
+alias updb='cd ~/projetos/postgres && docker compose up -d'
+alias downdb='cd ~/projetos/postgres && docker compose down'
 
 # custom ls dir
 alias l='ls -lrt'
